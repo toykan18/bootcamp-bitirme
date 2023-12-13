@@ -17,15 +17,15 @@ public class HomeController : Controller
     {
         var blog = new List<Blog>()
         {
-        new Blog { Id = 1,Image="1.jpg", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
-        new Blog { Id = 1,Image="1.jpg", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
-        new Blog { Id = 1,Image="1.jpg", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
-        new Blog { Id = 1,Image="1.jpg", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
+        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
+        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
+        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
+        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
        
         };
         return View(blog);
     }
-    public IActionResult Privacy()
+    public IActionResult About()
     {
         return View();
     }
