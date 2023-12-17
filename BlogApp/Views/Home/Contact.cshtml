@@ -1,0 +1,45 @@
+@model Contact
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <title>GameBlog</title>
+</head>
+<body>
+    <header>
+        @await Html.PartialAsync("_Navbar")
+        </header>
+         <!-- Main Content-->
+            <main>
+                <form asp-controller="Home" asp-action="Contact" method="post">
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label">Your Name</label>
+                        <input asp-for="Name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Surname" class="form-label">Your Surname</label>
+                        <input asp-for="Surname" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Eposta" class="form-label">Your Email</label>
+                        <input asp-for="Eposta" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Telephone" class="form-label">Your Phone Number</label>
+                        <input asp-for="Telephone" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <textarea asp-for="Message" name="message" id="message" cols="30" rows="10">Your Message</textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

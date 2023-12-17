@@ -1,38 +1,50 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using BlogApp.Models;
+using BlogApp.Data;
 
 namespace BlogApp.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
+   private readonly DataContext _context;
+    public HomeController(DataContext context){
+        _context = context;
     }
+
 
    public IActionResult Index()
     {
-        var blog = new List<Blog>()
-        {
-        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
-        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
-        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
-        new Blog { Id = 1,Image="1.png", Title = "First Blog Post", Description = "Description Of First Blog", Author = "ToykanA", PostedDate = DateTime.Now },
-       
-        };
+        return View(Repository.blogs);
+    }
+    public IActionResult Details(int id){
+        var blog = Repository.GetById(id);
         return View(blog);
     }
     public IActionResult About()
     {
         return View();
     }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+      public IActionResult Contact()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View();
     }
+    [HttpPost]
+      public async Task<IActionResult> Contact(Contact model)
+    {
+        _context.Contact.Add(model);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Index","Home");
+    }
+
+
+     public IActionResult Register()
+    {
+        return View();
+    }
+      public IActionResult Login()
+    {
+        return View();
+    }
+
+   
 }
