@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using BlogApp.Data;
+using System.Linq;
+using X.PagedList;
 
 
 namespace BlogApp.Controllers;
@@ -17,20 +19,36 @@ public class HomeController : Controller
 
    public IActionResult Index()
     {
-        return View(Repository.blogs);
+        var blogs = _context.Bloglar.ToList(); 
+        return View(blogs);
     }
-    public IActionResult Details(int id){
-        var blog = Repository.GetById(id);
-        return View(blog);
+    public IActionResult Details(int id)
+{
+    var blog = _context.Bloglar.FirstOrDefault(b => b.Id == id);
+
+    if (blog == null)
+    {
+        return NotFound(); 
     }
+
+    return View(blog);
+}
     public IActionResult CreateBlog(){
         return View();
     }
     [HttpPost]
     public async Task<IActionResult> CreateBlog(Blog model){
+
+        if (ModelState.IsValid)
+        {
+        // Şu anki tarih ve saat bilgisini al
+        model.PostedDate = DateTime.Now;
+    
         _context.Bloglar.Add(model);
         await _context.SaveChangesAsync();
         return RedirectToAction("Index","Home");
+        }
+        return View(model);
     }
     public IActionResult About()
     {

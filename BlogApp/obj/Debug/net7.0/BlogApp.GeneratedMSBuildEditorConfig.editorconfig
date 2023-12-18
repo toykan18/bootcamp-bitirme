@@ -46,16 +46,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/bootcamp-bitirme/BlogApp/Views/Home/_List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTGlzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/bootcamp-bitirme/BlogApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/bootcamp-bitirme/BlogApp/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/bootcamp-bitirme/BlogApp/Views/Shared/_Pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/bootcamp-bitirme/BlogApp/Views/Shared/_ValidationScriptsPartial.cshtml]

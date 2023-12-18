@@ -19,12 +19,16 @@
 }
 
 .row {
-  margin-top: 10px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
+.blog-card {
+  flex: 0 0 calc(48% - 10px); /* Kartların genişliği ve aralarındaki boşlukları belirler */
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+}
 .post-preview {
   display: flex;
   align-items: start;

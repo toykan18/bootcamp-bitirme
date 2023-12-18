@@ -67,3 +67,7 @@ E:\bootcamp-bitirme\BlogApp\bin\Debug\net7.0\Humanizer.dll
 E:\bootcamp-bitirme\BlogApp\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 E:\bootcamp-bitirme\BlogApp\bin\Debug\net7.0\Mono.TextTemplating.dll
 E:\bootcamp-bitirme\BlogApp\bin\Debug\net7.0\System.CodeDom.dll
+E:\bootcamp-bitirme\BlogApp\obj\Debug\net7.0\BlogApp.MvcApplicationPartsAssemblyInfo.cs
+E:\bootcamp-bitirme\BlogApp\bin\Debug\net7.0\JetBrains.Annotations.dll
+E:\bootcamp-bitirme\BlogApp\bin\Debug\net7.0\X.PagedList.dll
+E:\bootcamp-bitirme\BlogApp\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll

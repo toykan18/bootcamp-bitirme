@@ -22,7 +22,6 @@
     <select asp-for="Image" class="form-select">
         <option value="" selected>Select an Image</option>
         @{
-            // Burada img klasöründeki fotoğrafları listele
             var imagePath = "E:/bootcamp-bitirme/BlogApp/wwwroot/img/"; 
             var imageDirectory = new System.IO.DirectoryInfo(imagePath);
             var imageFiles = imageDirectory.GetFiles("*.jpg"); 
@@ -30,7 +29,7 @@
             foreach (var imageFile in imageFiles)
             {
                 var imageName = System.IO.Path.GetFileNameWithoutExtension(imageFile.Name);
-                <text><option value="@imageName">@imageName</option></text>
+                <text><option value="@imageFile.Name">@imageName</option></text>
             }
         }
     </select>

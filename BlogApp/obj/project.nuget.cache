@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ChSTo9vmviBfoTUJ5hmOEkbVdRzwyCvWo8bHrdkcyKubJICgU8UcHK0tZKtu5rzcjju0SFwgjxwNc9oBvocKfw==",
+  "dgSpecHash": "v5K+o+8w3nU6dzTVNcD9n2+COpyG3aDb5ndFz2F0MQRwkUrvD4bUkK1oyjgAv2QgDbnEXQVqHFQO++J6xxxGGA==",
   "success": true,
   "projectFilePath": "E:\\bootcamp-bitirme\\BlogApp\\BlogApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\toykan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\toykan\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\toykan\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.8\\microsoft.data.sqlite.core.7.0.8.nupkg.sha512",
     "C:\\Users\\toykan\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.8\\microsoft.entityframeworkcore.7.0.8.nupkg.sha512",
     "C:\\Users\\toykan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.8\\microsoft.entityframeworkcore.abstractions.7.0.8.nupkg.sha512",
@@ -31,7 +32,9 @@
     "C:\\Users\\toykan\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\toykan\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\toykan\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\toykan\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\toykan\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\toykan\\.nuget\\packages\\x.pagedlist\\8.4.7\\x.pagedlist.8.4.7.nupkg.sha512",
+    "C:\\Users\\toykan\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.7\\x.pagedlist.mvc.core.8.4.7.nupkg.sha512"
   ],
   "logs": []
 }

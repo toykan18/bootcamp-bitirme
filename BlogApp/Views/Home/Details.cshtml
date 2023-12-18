@@ -15,7 +15,23 @@
         @await Html.PartialAsync("_Navbar")
     </header>
     <main>
-       @await Html.PartialAsync("_List")
+      <div class="col-md-6 mb-4 blog-card" style="background-color: black;">
+                        <!-- Post preview-->
+                        <div class="post-preview" >
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@Model.Id">
+                                <img src="~/img/@Model.Image" class="img-fluid rounded" alt="Blog-Image" style="width: 300px; height: 200px; margin-right: 20px;";">
+                                <div style="flex: 1;">
+                                    <h2 class="post-title">@Model.Title</h2>
+                                    <h3 class="post-description">@Model.Description</h3>
+                                    <p class="post-meta">
+                                        Posted by
+                                        <a href="#!">@Model.Author</a>
+                                        on @Model.PostedDate.ToString("MMMM dd, yyyy")
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
     </main>
 </body>
 </html>
