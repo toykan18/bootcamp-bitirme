@@ -1,0 +1,59 @@
+
+@model Blog
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <title>GameBlog</title>
+</head>
+<body>
+    <header>
+        @await Html.PartialAsync("_Navbar")
+        </header>
+         <!-- Main Content-->
+            <main>
+             <form asp-controller="Home" asp-action="CreateBlog" method="post" enctype="multipart/form-data">
+    <!-- Diğer form alanları -->
+    <div class="mb-3">
+    <label asp-for="Image" class="form-label">Select Image</label>
+    <select asp-for="Image" class="form-select">
+        <option value="" selected>Select an Image</option>
+        @{
+            // Burada img klasöründeki fotoğrafları listele
+            var imagePath = "E:/bootcamp-bitirme/BlogApp/wwwroot/img/"; 
+            var imageDirectory = new System.IO.DirectoryInfo(imagePath);
+            var imageFiles = imageDirectory.GetFiles("*.jpg"); 
+
+            foreach (var imageFile in imageFiles)
+            {
+                var imageName = System.IO.Path.GetFileNameWithoutExtension(imageFile.Name);
+                <text><option value="@imageName">@imageName</option></text>
+            }
+        }
+    </select>
+</div>
+
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label">Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Description</label>
+        <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Author" class="form-label">Author</label>
+        <input asp-for="Author" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+            </main>
+        </div>
+    </div>
+</body>

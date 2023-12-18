@@ -2,13 +2,16 @@
 using Microsoft.AspNetCore.Mvc;
 using BlogApp.Data;
 
+
 namespace BlogApp.Controllers;
 
 public class HomeController : Controller
 {
    private readonly DataContext _context;
+   
     public HomeController(DataContext context){
         _context = context;
+        
     }
 
 
@@ -19,6 +22,15 @@ public class HomeController : Controller
     public IActionResult Details(int id){
         var blog = Repository.GetById(id);
         return View(blog);
+    }
+    public IActionResult CreateBlog(){
+        return View();
+    }
+    [HttpPost]
+    public async Task<IActionResult> CreateBlog(Blog model){
+        _context.Bloglar.Add(model);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Index","Home");
     }
     public IActionResult About()
     {
