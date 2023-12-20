@@ -1,4 +1,5 @@
 using BlogApp.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -13,6 +14,12 @@ builder.Services.AddDbContext<DataContext>(options => {
     options.UseSqlite(connectionString);
 });
 
+builder.Services.AddIdentity<AppUser, AppRole>(options =>
+{
+    // Identity konfigürasyonları
+})
+.AddEntityFrameworkStores<DataContext>()
+.AddSignInManager<SignInManager<AppUser>>();
 
 var app = builder.Build();
 
@@ -34,5 +41,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+IdentitySeedData.IdentityTestUser(app);
 
 app.Run();

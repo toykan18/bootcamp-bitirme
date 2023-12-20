@@ -1,9 +1,11 @@
 
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace BlogApp.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<AppUser, AppRole,string>
     {
          public DataContext(DbContextOptions<DataContext> options) : base(options)
         {

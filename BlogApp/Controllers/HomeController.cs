@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using BlogApp.Data;
 using System.Linq;
-using X.PagedList;
+
 
 
 namespace BlogApp.Controllers;
@@ -41,7 +41,6 @@ public class HomeController : Controller
 
         if (ModelState.IsValid)
         {
-        // Şu anki tarih ve saat bilgisini al
         model.PostedDate = DateTime.Now;
     
         _context.Bloglar.Add(model);
@@ -67,14 +66,6 @@ public class HomeController : Controller
     }
 
 
-     public IActionResult Register()
-    {
-        return View();
-    }
-      public IActionResult Login()
-    {
-        return View();
-    }
-
+   
    
 }

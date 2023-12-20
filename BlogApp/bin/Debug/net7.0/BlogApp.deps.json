@@ -8,11 +8,10 @@
     ".NETCoreApp,Version=v7.0": {
       "BlogApp/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.8",
           "Microsoft.EntityFrameworkCore": "7.0.8",
           "Microsoft.EntityFrameworkCore.Design": "7.0.8",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.8",
-          "X.PagedList": "8.4.7",
-          "X.PagedList.Mvc.Core": "8.4.7"
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.8"
         },
         "runtime": {
           "BlogApp.dll": {}
@@ -26,11 +25,34 @@
           }
         }
       },
-      "JetBrains.Annotations/2022.3.1": {
+      "Microsoft.AspNetCore.Cryptography.Internal/7.0.8": {
         "runtime": {
-          "lib/netstandard2.0/JetBrains.Annotations.dll": {
-            "assemblyVersion": "4242.42.42.42",
-            "fileVersion": "2022.3.1.0"
+          "lib/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.823.31807"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/7.0.8": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "7.0.8"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.823.31807"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.8": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.8",
+          "Microsoft.Extensions.Identity.Stores": "7.0.8"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
+            "assemblyVersion": "7.0.8.0",
+            "fileVersion": "7.0.823.31807"
           }
         }
       },
@@ -124,7 +146,7 @@
           "Microsoft.Extensions.Caching.Abstractions": "7.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Options": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.1",
           "Microsoft.Extensions.Primitives": "7.0.0"
         }
       },
@@ -151,19 +173,51 @@
           }
         }
       },
+      "Microsoft.Extensions.Identity.Core/7.0.8": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "7.0.8",
+          "Microsoft.Extensions.Logging": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.1"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Identity.Core.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.823.31807"
+          }
+        }
+      },
+      "Microsoft.Extensions.Identity.Stores/7.0.8": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Identity.Core": "7.0.8",
+          "Microsoft.Extensions.Logging": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Identity.Stores.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.823.31807"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Options": "7.0.0"
+          "Microsoft.Extensions.Options": "7.0.1"
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/7.0.0": {},
-      "Microsoft.Extensions.Options/7.0.0": {
+      "Microsoft.Extensions.Options/7.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Primitives": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.323.6910"
+          }
         }
       },
       "Microsoft.Extensions.Primitives/7.0.0": {},
@@ -345,28 +399,6 @@
         "dependencies": {
           "System.Text.Encodings.Web": "7.0.0"
         }
-      },
-      "X.PagedList/8.4.7": {
-        "dependencies": {
-          "JetBrains.Annotations": "2022.3.1"
-        },
-        "runtime": {
-          "lib/net7.0/X.PagedList.dll": {
-            "assemblyVersion": "8.4.7.0",
-            "fileVersion": "8.4.7.0"
-          }
-        }
-      },
-      "X.PagedList.Mvc.Core/8.4.7": {
-        "dependencies": {
-          "X.PagedList": "8.4.7"
-        },
-        "runtime": {
-          "lib/net7.0/X.PagedList.Mvc.Core.dll": {
-            "assemblyVersion": "8.4.7.0",
-            "fileVersion": "8.4.7.0"
-          }
-        }
       }
     }
   },
@@ -383,12 +415,26 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "JetBrains.Annotations/2022.3.1": {
+    "Microsoft.AspNetCore.Cryptography.Internal/7.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-11nsS3+lFICGkztVs9PP2NRItxf9fF+qD6xEW/T0YGto52zj07wseUeBdMAU1ah9HNVTDZyRC1u4NWdtJScwhw==",
-      "path": "jetbrains.annotations/2022.3.1",
-      "hashPath": "jetbrains.annotations.2022.3.1.nupkg.sha512"
+      "sha512": "sha512-zEizZhRWT7zlPphdDSu3lcTjd6Lhn6i4LyE0fvx/Ru+RbBrMATinfU2Z1wKAX/yNLdMM7LSwMoPmBR4xum6jkw==",
+      "path": "microsoft.aspnetcore.cryptography.internal/7.0.8",
+      "hashPath": "microsoft.aspnetcore.cryptography.internal.7.0.8.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/7.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M7CEWYQXGsOqNEAWFki8ptAOldJMvr2nw8IpqFa6J+rnH+u20pYMo6Mn32pLmgFC0UzwIPmk0WI1y+M4U9z8aQ==",
+      "path": "microsoft.aspnetcore.cryptography.keyderivation/7.0.8",
+      "hashPath": "microsoft.aspnetcore.cryptography.keyderivation.7.0.8.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sYdbJ05fhDjgg9OuFWBbKEhkKu719LJd9ztmDwZ4bSVpjySgLsctPF5EyJBBTyCDgYOFMjrmOhigj0nhGRT1oQ==",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/7.0.8",
+      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.7.0.8.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/7.0.8": {
       "type": "package",
@@ -488,6 +534,20 @@
       "path": "microsoft.extensions.dependencymodel/7.0.0",
       "hashPath": "microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Identity.Core/7.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kb7RoSkuQ1YVOwbv5C81O1L/b5ja96U5W//IRw+XQ20rDi7hof7dxUU5bhbqszpj/89IQ87/dNaE5PJKVPm9Aw==",
+      "path": "microsoft.extensions.identity.core/7.0.8",
+      "hashPath": "microsoft.extensions.identity.core.7.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Identity.Stores/7.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bPbA0QRHMFyDSCozcGLWq5/53eLPY9rS98jXRnNNlr7+jjS9/BvVhCcFRCmjCHBxG1MYCX98aJMZCt49cL2COg==",
+      "path": "microsoft.extensions.identity.stores/7.0.8",
+      "hashPath": "microsoft.extensions.identity.stores.7.0.8.nupkg.sha512"
+    },
     "Microsoft.Extensions.Logging/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -502,12 +562,12 @@
       "path": "microsoft.extensions.logging.abstractions/7.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Options/7.0.0": {
+    "Microsoft.Extensions.Options/7.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lP1yBnTTU42cKpMozuafbvNtQ7QcBjr/CcK3bYOGEMH55Fjt+iecXjT6chR7vbgCMqy3PG3aNQSZgo/EuY/9qQ==",
-      "path": "microsoft.extensions.options/7.0.0",
-      "hashPath": "microsoft.extensions.options.7.0.0.nupkg.sha512"
+      "sha512": "sha512-pZRDYdN1FpepOIfHU62QoBQ6zdAoTvnjxFfqAzEd9Jhb2dfhA5i6jeTdgGgcgTWFRC7oT0+3XrbQu4LjvgX1Nw==",
+      "path": "microsoft.extensions.options/7.0.1",
+      "hashPath": "microsoft.extensions.options.7.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "type": "package",
@@ -578,20 +638,6 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
-    },
-    "X.PagedList/8.4.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZA1WcyNviMUhivCgwKAm/5/YsNP3Yf/n81SzrPaHSJOcFzavA9MrXTT8M+ZX4fvHwLCL1bY6BPXvwZF5pRtgTg==",
-      "path": "x.pagedlist/8.4.7",
-      "hashPath": "x.pagedlist.8.4.7.nupkg.sha512"
-    },
-    "X.PagedList.Mvc.Core/8.4.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dS8sJr/aT3AoV9ePaqmF4wijh/2vqS9rxpOvzjPPStkQcR8rUaGPVezPgY/kJwWCZ2hdgKNralbU08So0otNxw==",
-      "path": "x.pagedlist.mvc.core/8.4.7",
-      "hashPath": "x.pagedlist.mvc.core.8.4.7.nupkg.sha512"
     }
   }
 }
