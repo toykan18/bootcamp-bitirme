@@ -14,12 +14,7 @@ builder.Services.AddDbContext<DataContext>(options => {
     options.UseSqlite(connectionString);
 });
 
-builder.Services.AddIdentity<AppUser, AppRole>(options =>
-{
-    // Identity konfigürasyonları
-})
-.AddEntityFrameworkStores<DataContext>()
-.AddSignInManager<SignInManager<AppUser>>();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DataContext>();
 
 var app = builder.Build();
 

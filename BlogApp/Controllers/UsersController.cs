@@ -9,9 +9,12 @@ namespace BlogApp.Controllers
     public class UsersController : Controller {
 
         private UserManager<AppUser> _userManager;
+        private SignInManager<AppUser> _signInManager;
 
-        public UsersController(UserManager<AppUser> userManager){
+        public UsersController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
         public IActionResult Index (){
             return View(_userManager.Users);
@@ -43,6 +46,33 @@ namespace BlogApp.Controllers
         {
             return View();
         }
+        [HttpPost]
+    public async Task<IActionResult> Login(LoginViewModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user != null)
+            {
+                var signInResult = await _signInManager.PasswordSignInAsync(user, model.Password, false, lockoutOnFailure: false);
+
+                if (signInResult.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+        }
+
+        return View();
+    }
+      public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+}
 
     }
-}

@@ -34,7 +34,13 @@ public class HomeController : Controller
     return View(blog);
 }
     public IActionResult CreateBlog(){
-        return View();
+         if (User?.Identity?.IsAuthenticated != true)
+    {
+        // Kullanıcı giriş yapmamışsa, sayfayı gösterme
+        return RedirectToAction("Login", "Users"); // Kullanıcıyı giriş sayfasına yönlendir
+    }
+
+    return View();
     }
     [HttpPost]
     public async Task<IActionResult> CreateBlog(Blog model){
