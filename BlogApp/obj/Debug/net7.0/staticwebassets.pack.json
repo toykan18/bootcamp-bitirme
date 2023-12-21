@@ -41,6 +41,14 @@
       "PackagePath": "staticwebassets\\img\\albion2.png"
     },
     {
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\contact-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\contact-bg.jpg"
+    },
+    {
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\contact-bg1.jpg",
+      "PackagePath": "staticwebassets\\img\\contact-bg1.jpg"
+    },
+    {
       "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\csgo.jpg",
       "PackagePath": "staticwebassets\\img\\csgo.jpg"
     },
