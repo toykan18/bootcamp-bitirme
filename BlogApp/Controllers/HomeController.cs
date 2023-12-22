@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using BlogApp.Data;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 
 
@@ -48,6 +49,7 @@ public class HomeController : Controller
         if (ModelState.IsValid)
         {
         model.PostedDate = DateTime.Now;
+        model.Author = User.Identity?.Name;
     
         _context.Bloglar.Add(model);
         await _context.SaveChangesAsync();

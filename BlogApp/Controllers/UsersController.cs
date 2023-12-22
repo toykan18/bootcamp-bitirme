@@ -1,5 +1,6 @@
 using BlogApp.Data;
 using BlogApp.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Controllers
 {
+    
     public class UsersController : Controller {
 
         private UserManager<AppUser> _userManager;

@@ -1,37 +1,38 @@
 @model Blog
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/styles.css" />
-    <title>GameBlog</title>
+    <title>@Model.Title</title>
 </head>
 <body style="background-color: black;">
     <header>
         @await Html.PartialAsync("_Navbar")
     </header>
-    <main>
-      <div class="col-md-6 mb-4 blog-card" style="background-color: black;">
-                        <!-- Post preview-->
-                        <div class="detail-container">
-                            <a asp-controller="Home" asp-action="Details" asp-route-id="@Model.Id">
-                                <img src="~/img/@Model.Image" class="img-fluid rounded" alt="Blog-Image" style="width: 300px; height: 200px; margin-right: 20px;";">
-                                <div style="flex: 1;">
-                                    <h2 class="post-title">@Model.Title</h2>
-                                    <h3 class="post-description">@Model.Description</h3>
-                                    <p class="post-meta">
-                                        Posted by
-                                        <a href="#!">@Model.Author</a>
-                                        on @Model.PostedDate.ToString("MMMM dd, yyyy")
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card mb-3" style="background-color: black;">
+                    <img src="~/img/@Model.Image" class="card-img-top" alt="Blog-Image">
+                    <div class="card-body">
+                        <h2 class="card-title">@Model.Title</h2>
+                        <p class="card-text" style="color: white;">@Model.Description</p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Posted by <strong>@Model.Author</strong> on @Model.PostedDate.ToString("MMMM dd, yyyy")
+                            </small>
+                        </p>
                     </div>
-    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

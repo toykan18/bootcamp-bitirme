@@ -16,6 +16,12 @@ builder.Services.AddDbContext<DataContext>(options => {
 
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DataContext>();
 
+builder.Services.ConfigureApplicationCookie(options => {
+    options.LoginPath = "/Users/Login";
+    options.AccessDeniedPath = "/Account/AccesDenied";
+    options.SlidingExpiration = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(30);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -32,6 +38,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",
