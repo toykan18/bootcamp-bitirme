@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace BlogApp.Data
 {
     public static class IdentitySeedData{
@@ -16,6 +17,7 @@ namespace BlogApp.Data
             }
 
             var UserManager = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+            var RoleManager = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<RoleManager<AppRole>>();
 
             var user = await UserManager.FindByIdAsync(adminUser);
             if(user == null){
@@ -26,6 +28,13 @@ namespace BlogApp.Data
                 };
 
                 await UserManager.CreateAsync(user, adminPassword);
+                 var adminRoleExists = await RoleManager.RoleExistsAsync("Admin");
+            if (!adminRoleExists)
+            {
+            await RoleManager.CreateAsync(new AppRole {Name = "Admin"});
+            await UserManager.AddToRoleAsync(user, "Admin");
+             }
+                
             }
         }
 

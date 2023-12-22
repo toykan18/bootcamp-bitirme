@@ -1,9 +1,11 @@
 using BlogApp.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Controllers
-{
+{   
+   
     public class RolesController : Controller{
 
         private readonly RoleManager<AppRole> _roleManager;

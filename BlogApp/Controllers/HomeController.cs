@@ -37,8 +37,8 @@ public class HomeController : Controller
     public IActionResult CreateBlog(){
          if (User?.Identity?.IsAuthenticated != true)
     {
-        // Kullanıcı giriş yapmamışsa, sayfayı gösterme
-        return RedirectToAction("Login", "Users"); // Kullanıcıyı giriş sayfasına yönlendir
+       
+        return RedirectToAction("Login", "Users"); 
     }
 
     return View();
