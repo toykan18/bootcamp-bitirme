@@ -20,22 +20,22 @@
     <div class="row">
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
-          <div class="card-img-left d-none d-md-flex">
+          <div class="card-img-left d-none d-md-flex" style="background: scroll center url('../img/Login.png'); background-size:cover;">
             <!-- Background image for card set in CSS! -->
           </div>
-          <div class="card-body p-4 p-sm-5">
-            <h5 class="card-title text-center mb-5 fw-light fs-5">LogIn</h5>
-            <form asp-action="Login" method="post">
+          <div class="card-body p-4 p-sm-5" style="background-color: black;">
+            <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: white;">Login</h5>
+            <form asp-action="Login" method="post" style="height: 542px;">
 
               <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Email" class="form-control" placeholder="name@example.com">
+        <input asp-for="Email" class="form-control">
         <label asp-for="Email">Email address</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Password" class="form-control" placeholder="Password">
+        <input asp-for="Password" class="form-control">
         <label asp-for="Password">Password</label>
     </div>
 

@@ -22,10 +22,9 @@
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
           <div class="card-img-left d-none d-md-flex">
-            <!-- Background image for card set in CSS! -->
           </div>
-          <div class="card-body p-4 p-sm-5">
-            <h5 class="card-title text-center mb-5 fw-light fs-5">Register</h5>
+          <div class="card-body p-4 p-sm-5" style="background-color: black;">
+            <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: white;">Register</h5>
             <form asp-action="Register" method="post">
               <div asp-validation-summary="All" class="text-danger"></div>
 
@@ -35,19 +34,19 @@
               </div>
 
               <div class="form-floating mb-3">
-                <input asp-for="Email" class="form-control" placeholder="name@example.com">
+                <input asp-for="Email" class="form-control">
                 <label asp-for="Email">Email address</label>
               </div>
 
               <hr>
 
               <div class="form-floating mb-3">
-                <input asp-for="Password" class="form-control" placeholder="Password">
+                <input asp-for="Password" class="form-control">
                 <label asp-for="Password">Password</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password">
+                <input asp-for="ConfirmPassword" class="form-control">
                 <label asp-for="ConfirmPassword">Confirm Password</label>
               </div>
 
@@ -55,7 +54,7 @@
                 <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Register</button>
               </div>
 
-              <a class="d-block text-center mt-2 small" asp-controller="Home" asp-action="Login">Have an account? Sign In</a>
+              <a class="d-block text-center mt-2 small" asp-controller="Users" asp-action="Login">Have an account? Sign In</a>
 
               <hr class="my-4">
 

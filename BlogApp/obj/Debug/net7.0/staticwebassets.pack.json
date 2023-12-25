@@ -29,40 +29,56 @@
       "PackagePath": "staticwebassets\\img\\1.png"
     },
     {
-      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\about-bg.jpg",
-      "PackagePath": "staticwebassets\\img\\about-bg.jpg"
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\Arma3.jpg",
+      "PackagePath": "staticwebassets\\img\\Arma3.jpg"
+    },
+    {
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\Login.png",
+      "PackagePath": "staticwebassets\\img\\Login.png"
+    },
+    {
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\Logo.png",
+      "PackagePath": "staticwebassets\\img\\Logo.png"
+    },
+    {
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\Lol.jpg",
+      "PackagePath": "staticwebassets\\img\\Lol.jpg"
+    },
+    {
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\Register.png",
+      "PackagePath": "staticwebassets\\img\\Register.png"
     },
     {
       "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\albion1.jpg",
       "PackagePath": "staticwebassets\\img\\albion1.jpg"
     },
     {
-      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\albion2.png",
-      "PackagePath": "staticwebassets\\img\\albion2.png"
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\apex.jpg",
+      "PackagePath": "staticwebassets\\img\\apex.jpg"
     },
     {
-      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\contact-bg.jpg",
-      "PackagePath": "staticwebassets\\img\\contact-bg.jpg"
-    },
-    {
-      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\contact-bg1.jpg",
-      "PackagePath": "staticwebassets\\img\\contact-bg1.jpg"
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\contact-bg.png",
+      "PackagePath": "staticwebassets\\img\\contact-bg.png"
     },
     {
       "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\csgo.jpg",
       "PackagePath": "staticwebassets\\img\\csgo.jpg"
     },
     {
-      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\home-bg.jpg",
-      "PackagePath": "staticwebassets\\img\\home-bg.jpg"
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\eft.jpg",
+      "PackagePath": "staticwebassets\\img\\eft.jpg"
     },
     {
-      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\img.png",
-      "PackagePath": "staticwebassets\\img\\img.png"
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\home-bg.png",
+      "PackagePath": "staticwebassets\\img\\home-bg.png"
     },
     {
-      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\login-register.jpg",
-      "PackagePath": "staticwebassets\\img\\login-register.jpg"
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\login-register.png",
+      "PackagePath": "staticwebassets\\img\\login-register.png"
+    },
+    {
+      "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\img\\wow.jpg",
+      "PackagePath": "staticwebassets\\img\\wow.jpg"
     },
     {
       "Id": "E:\\bootcamp-bitirme\\BlogApp\\wwwroot\\js\\site.js",
